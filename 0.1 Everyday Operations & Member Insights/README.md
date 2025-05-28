@@ -12,3 +12,19 @@
 ## Next Phase
 
 
+
+
+
+
+
+
+# Team Members:
+
+- abubakarnanaaishah@gmail.com
+
+- Brenda Okonofua (brenvaltessy@yahoo.com)
+
+- lifeisgood4yemisi@gmail.com
+
+- rosheedatdasolabusari@gmail.com
+
