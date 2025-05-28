@@ -1,0 +1,6 @@
+TierID,TierName,MonthlyFee,SpecificBenefits
+1,Bronze,30.0,"Access to gym floor during all hours, 2 group class credits/month."
+2,Silver,50.0,"Full gym floor access, 10 group class credits/month, towel service."
+3,Gold,80.0,"Full gym floor access, unlimited group classes, personal trainer discount (10%), sauna access."
+4,Platinum,120.0,"All Gold benefits, +2 free personal training sessions/month, nutritional guidance session quarterly."
+,,,
