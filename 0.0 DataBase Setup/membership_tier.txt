@@ -1,1 +1,7 @@
-Data for membership tiers was included in the project brief
+Data for membership tiers was included in the project brief:
+Tier Details (as of May 27, 2025):
+Tier 1: "Bronze" - $30.00/month - "Access to gym floor during all hours, 2 group class credits/month."
+Tier 2: "Silver" - $50.00/month - "Full gym floor access, 10 group class credits/month, towel service."
+Tier 3: "Gold" - $80.00/month - "Full gym floor access, unlimited group classes, personal trainer discount (10%), sauna access."
+Tier 4: "Platinum" - $120.00/month - "All Gold benefits, +2 free personal training sessions/month, nutritional guidance session quarterly."
+
