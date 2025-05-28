@@ -1,0 +1,26 @@
+ClassID,ClassName,Description,DurationMinutes,MaxCapacity,CurrentBookings,ClassDate,ClassTime,InstructorID
+1,Morning Yoga,Gentle yoga for all levels,60,20,0,2025-06-01,08:00:00,1
+2,Evening Spin,High-energy cycling class,45,15,0,2025-06-01,18:30:00,2
+3,HIIT Blast,High-intensity interval training,30,25,0,2025-06-02,07:00:00,1
+4,Zumba Dance,Fun dance fitness,60,30,0,2025-06-02,19:00:00,3
+5,Pilates Core,Strengthen your core,50,18,0,2025-06-03,10:00:00,4
+6,Cardio Kick,High-energy cardio,45,22,0,2025-06-03,17:00:00,5
+7,Strength Training,Full body workout,60,12,0,2025-06-04,09:00:00,6
+8,Aqua Aerobics,Low-impact water workout,45,20,0,2025-06-04,11:00:00,7
+9,Restorative Yoga,Relaxation and stretching,75,15,0,2025-06-05,16:00:00,1
+10,Boxing Fundamentals,Learn basic boxing techniques,60,10,0,2025-06-05,19:30:00,8
+11,Spin Endurance,Longer, challenging spin,60,15,0,2025-06-06,06:30:00,2
+12,Body Sculpt,Targeted muscle toning,45,20,0,2025-06-06,12:00:00,4
+13,Meditation Hour,Mindfulness and calm,30,10,0,2025-06-07,09:00:00,3
+14,Advanced HIIT,For experienced HIIT enthusiasts,45,20,0,2025-06-07,17:00:00,5
+15,Morning Yoga,Gentle yoga for all levels,60,20,0,2025-06-08,08:00:00,1
+16,Evening Spin,High-energy cycling class,45,15,0,2025-06-08,18:30:00,2
+17,HIIT Blast,High-intensity interval training,30,25,0,2025-06-09,07:00:00,1
+18,Zumba Dance,Fun dance fitness,60,30,0,2025-06-09,19:00:00,3
+19,Pilates Core,Strengthen your core,50,18,0,2025-06-10,10:00:00,4
+20,Cardio Kick,High-energy cardio,45,22,0,25-06-10,17:00:00,5
+21,Strength Training,Full body workout,60,12,0,2025-06-11,09:00:00,6
+22,Aqua Aerobics,Low-impact water workout,45,20,0,2025-06-11,11:00:00,7
+23,Restorative Yoga,Relaxation and stretching,75,15,0,2025-06-12,16:00:00,1
+24,Boxing Fundamentals,Learn basic boxing techniques,60,10,0,2025-06-12,19:30:00,8
+25,Spin Endurance,Longer, challenging spin,60,15,0,2025-06-13,06:30:00,2
