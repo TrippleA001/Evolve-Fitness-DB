@@ -24,7 +24,7 @@
 
 - Brenda Okonofua (brenvaltessy@yahoo.com)
 
-- lifeisgood4yemisi@gmail.com
+- Khadijat Abubakar lifeisgood4yemisi@gmail.com
 
 - rosheedatdasolabusari@gmail.com
 
