@@ -9,6 +9,120 @@
 - The data where imported via MYSQL benchmark
 - Had a meeting with Sarah to ensure that we are on same page with her dream database, she was happy with the design concept and logical ERD we gave her.
 
+## Phase 1 of the project
+Evolve Fitness SQL Project – Tier 1 Summary Presentation
+Project Overview – Sarah's Vision
+
+Sarah Michael, the new owner of Evolve Fitness, needed a fully digital database system to manage:
+
+* Members
+* Classes & Instructors
+* Bookings
+* Payments
+* Membership Tiers
+
+We were tasked with designing and implementing a MySQL database system to achieve this.
+
+---
+
+###  Entity Identification & Database Design
+
+Core Entities:
+
+1. Members – Tracks users who attend the gym
+2. MembershipTiers – Each member belongs to one tier
+3. Instructors – Trainers who run the classes
+4. Classes – Unique fitness programs (e.g., Yoga)
+5. ScheduledClasses – Specific date/time offerings of each class
+6. Bookings – Tracks which members book which class session
+7. Payments – Tracks all payment transactions by members
+
+Relationships:
+
+* Members 1:1 MembershipTiers
+* Instructors 1\:N ScheduledClasses
+* Classes 1\:N ScheduledClasses
+* Members 1\:N Bookings
+* ScheduledClasses 1\:N Bookings
+* Members 1\:N Payments
+
+Business Rules Implemented:
+
+* No double booking of the same class
+* MaxCapacity enforcement on class bookings
+* Payment updates automatically refresh member status
+
+---
+
+###  Tier 1 Queries: Member Operations & Insights
+
+Q1 – Active Members Info:
+
+* Fetched FirstName, LastName, Email, and TierName where status is 'Active'.
+
+Q2 – Expired Members Count:
+
+* Counted all members with MembershipStatus = 'Expired'.
+
+Q3 – Upcoming Payments:
+
+* Listed members whose NextPaymentDueDate is on/before June 10, 2025.
+
+Q4 – Recently Registered Members:
+
+* Queried members who joined after January 1, 2025.
+
+Q5 & Q6 – Name Filters:
+
+* Used pattern matching (LIKE) to find names starting with 'S' or containing 'on'/'o'.
+
+---
+
+###  Class Scheduling & Instructor Queries
+
+Q7 – Unique Classes:
+
+* Selected distinct ClassNames from the Classes table.
+
+Q8 – Classes on June 1, 2025:
+
+* Displayed all scheduled classes and instructor names on that date.
+
+Q9 – Jane Doe's Schedule:
+
+* Counted how many classes Jane Doe is teaching using JOIN and filter.
+
+Q10 – Instructor Contact List:
+
+* Used IFNULL() to replace null phone numbers with 'Not Provided'.
+
+Q11 – Never Booked HIIT Blast:*
+
+* Found members who never booked 'HIIT Blast' using NOT EXISTS.
+
+---
+
+###  Bookings & Payment Basics
+
+Q12 – Morning Yoga on June 1:
+
+* Displayed members who booked 'Morning Yoga' on that day and when.
+
+Q13 – Total Paid Revenue:
+
+* Summed all payments with status 'Paid' for a quick financial snapshot.
+
+---
+
+###  Final Notes
+
+* Database was populated using 6 CSV datasets
+* Verified totals: 50 members, 8 instructors, 25 classes, 200 bookings, 148 payments, 4 tiers
+* SQL scripts include all DDL (CREATE TABLE), data imports, and query logic
+
+This setup provides a strong analytical foundation for daily operations, strategic insights, and future automation (via triggers, events, and stored procedures).
+
+
 ## Phase 2
 Tier 2 SQL Analytics Summary – Evolve Fitness
 
