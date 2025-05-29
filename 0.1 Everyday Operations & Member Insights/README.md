@@ -20,7 +20,7 @@
 
 # Team Members:
 
-- abubakarnanaaishah@gmail.com
+-Abubakar nana Aishah (abubakarnanaaishah@gmail.com)
 
 - Brenda Okonofua (brenvaltessy@yahoo.com)
 
