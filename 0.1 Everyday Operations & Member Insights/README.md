@@ -26,5 +26,5 @@
 
 - Khadijat Abubakar lifeisgood4yemisi@gmail.com
 
-- rosheedatdasolabusari@gmail.com
+- Rosheedat Dasola (rosheedatdasolabusari@gmail.com)
 
