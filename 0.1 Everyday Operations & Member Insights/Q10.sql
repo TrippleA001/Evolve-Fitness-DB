@@ -7,3 +7,5 @@ SELECT
     Email,
     COALESCE(Phone, 'Not Provided') AS Phone
 FROM instructors;
+
+# All work welldone by teammembers
