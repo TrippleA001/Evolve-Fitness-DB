@@ -196,7 +196,7 @@ Q26 – Booking History + Previous Class
 
 # Team Members:
 
-- abubakarnanaaishah@gmail.com
+-Abubakar nana Aishat (abubakarnanaaishah@gmail.com)
 
 - Brenda Okonofua (brenvaltessy@yahoo.com)
 
