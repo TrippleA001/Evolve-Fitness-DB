@@ -7,3 +7,5 @@ SELECT
     RegistrationDate
 FROM members
 WHERE registrationdate >= '2025-01-01';
+
+-- Change the date to database structure that is yyyy-mm-dd
