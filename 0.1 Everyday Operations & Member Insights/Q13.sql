@@ -1,0 +1,1 @@
+SELECT count(*)from payments where PaymentStatus = 'paid';
