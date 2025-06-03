@@ -219,7 +219,11 @@ This ensures that once a transaction has started processing a member's payment a
 
 # Team Members:
 
+<<<<<<< HEAD
 - Nana Aishah (abubakarnanaaishah@gmail.com)
+=======
+-Abubakar nana Aishat (abubakarnanaaishah@gmail.com)
+>>>>>>> 828e268e84c5d467905b9f8e62c8049b7e12d669
 
 - Brenda Okonofua (brenvaltessy@yahoo.com)
 
