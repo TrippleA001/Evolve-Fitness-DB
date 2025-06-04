@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 SELECT
   ClassName,
   ClassDate,
@@ -16,3 +17,13 @@ FROM
   MaxCapacity INT,
   CurrentBookings INT
 );
+=======
+ SELECT 
+	 ClassName,
+	 ClassDate,
+	 ClassTime,
+	 MaxCapacity,
+	 CurrentBookings,
+ROUND((CurrentBookings / MaxCapacity) * 100) AS booking_percentage
+FROM Classes;
+>>>>>>> 3041424cabc4d7b0036c3443704e477f8260a90b
