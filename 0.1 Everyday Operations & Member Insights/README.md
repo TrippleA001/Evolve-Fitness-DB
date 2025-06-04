@@ -187,7 +187,7 @@ Q26 – Booking History + Previous Class
 
 > We created a booking history for each member. Using LEFT JOIN, we attempted to retrieve details of the previous class booked (if any), giving us a timeline view of activity.
 
-# Advanced Phase:
+# Advanced and Final Phase:
 Locking (Conceptual Explanation for ProcessMemberPayment)
 
 In a highly concurrent system, if multiple ProcessMemberPayment calls for the same member happen almost simultaneously, there's a risk of a "race condition". For example:
@@ -202,13 +202,25 @@ To prevent this, SELECT ... FOR UPDATE can be used. When you SELECT ... FOR UPDA
 
 ## How it would be used:
 
--- Inside ProcessMemberPayment, before reading member's current status and fee:
-SELECT mt.MonthlyFee, m.MembershipStatus, m.TotalPaymentsMade
-INTO v_MonthlyFee, v_CurrentMembershipStatus, v_TotalPaymentsMade
-FROM Members m
-JOIN MembershipTiers mt ON m.MembershipTierID = mt.MembershipTierID
-WHERE m.MemberID = p_MemberID
-FOR UPDATE; 
+- Inside ProcessMemberPayment, before reading member's current status and fee:
+SELECT 
+    mt.MonthlyFee, 
+    m.MembershipStatus, 
+    m.TotalPaymentsMade
+INTO 
+    v_MonthlyFee, 
+    v_CurrentMembershipStatus, 
+    v_TotalPaymentsMade
+FROM 
+    Members m
+JOIN 
+    MembershipTiers mt 
+ON 
+    m.MembershipTierID = mt.MembershipTierID
+WHERE 
+    m.MemberID = p_MemberID
+FOR UPDATE;
+
 -- This locks the member's row.
 This ensures that once a transaction has started processing a member's payment and has acquired a lock, no other transaction can read or modify that member's financial state until the first transaction completes, guaranteeing atomicity and correctness for concurrent updates.
 
@@ -219,11 +231,11 @@ This ensures that once a transaction has started processing a member's payment a
 
 # Team Members:
 
--Abubakar nana Aishat (abubakarnanaaishah@gmail.com)
+- Abubakar nana Aishat (abubakarnanaaishah@gmail.com)
 
 - Brenda Okonofua (brenvaltessy@yahoo.com)
 
-- Khadijat Abubakar lifeisgood4yemisi@gmail.com
+- Khadijat Abubakar (lifeisgood4yemisi@gmail.com)
 
 - Rosheedat Dasola (rosheedatdasolabusari@gmail.com)
 
