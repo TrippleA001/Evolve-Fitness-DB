@@ -1,9 +1,11 @@
 SELECT 
   c.ClassName,
-  sc.ClassDate,
-  sc.ClassTime,
-  sc.MaxCapacity,
-  sc.CurrentBookings,
-  ROUND((sc.CurrentBookings / sc.MaxCapacity) * 100, 2) AS BookingPercentage
-FROM scheduled_classes sc
-JOIN classes c ON sc.ClassID = c.ClassID;
+  cs.ClassDate,
+  cs.ClassTime,
+  c.MaxCapacity,
+  COUNT(b.BookingID) AS CurrentBookings,
+  ROUND((COUNT(b.BookingID) / c.MaxCapacity) * 100, 2) AS BookingPercentage
+FROM class_sessions cs
+JOIN classes c ON cs.ClassID = c.ClassID
+LEFT JOIN bookings b ON cs.SessionID = b.SessionID
+GROUP BY cs.SessionID;
