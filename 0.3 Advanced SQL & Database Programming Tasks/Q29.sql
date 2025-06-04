@@ -1,4 +1,4 @@
--- 3. UDF (User Defined Function)
+-- 3. UDF (User Defined Function) question
 -- 3A. CalculateMemberAge
 DELIMITER //
 
