@@ -1,8 +1,8 @@
 SELECT 
   CONCAT(i.FirstName, ' ', i.LastName) AS InstructorName,
-  sc.ClassDate,
+  cs.ClassDate,
   COUNT(*) AS ClassesOnSameDay
 FROM instructors i
-JOIN scheduled_classes sc ON i.InstructorID = sc.InstructorID
-GROUP BY i.InstructorID, sc.ClassDate
+JOIN class_sessions cs ON i.InstructorID = cs.InstructorID
+GROUP BY i.InstructorID, cs.ClassDate
 HAVING COUNT(*) > 1;
