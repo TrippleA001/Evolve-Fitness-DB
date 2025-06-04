@@ -200,33 +200,7 @@ The correct total should be $160.
 
 To prevent this, SELECT ... FOR UPDATE can be used. When you SELECT ... FOR UPDATE on a row (or set of rows), it places an exclusive lock on those rows, preventing other transactions from modifying them until the current transaction is committed or rolled back.
 
-## How it would be used:
-
-- Inside ProcessMemberPayment, before reading member's current status and fee:
-SELECT 
-    mt.MonthlyFee, 
-    m.MembershipStatus, 
-    m.TotalPaymentsMade
-INTO 
-    v_MonthlyFee, 
-    v_CurrentMembershipStatus, 
-    v_TotalPaymentsMade
-FROM 
-    Members m
-JOIN 
-    MembershipTiers mt 
-ON 
-    m.MembershipTierID = mt.MembershipTierID
-WHERE 
-    m.MemberID = p_MemberID
-FOR UPDATE;
-
--- This locks the member's row.
-This ensures that once a transaction has started processing a member's payment and has acquired a lock, no other transaction can read or modify that member's financial state until the first transaction completes, guaranteeing atomicity and correctness for concurrent updates.
-
-
-
-
+- This ensures that once a transaction has started processing a member's payment and has acquired a lock, no other transaction can read or modify that member's financial state until the first transaction completes, guaranteeing atomicity and correctness for concurrent updates.
 
 
 # Team Members:
