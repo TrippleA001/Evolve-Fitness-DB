@@ -2,21 +2,15 @@
 -- the running total revenue per class over the months, the running total revenue per month 
 -- across all classes.
 
-SELECT 
-  c.ClassName,
-  DATE_FORMAT(p.PaymentDate, '%Y-%m') AS RevenueMonth,
-  SUM(p.Amount) AS MonthlyRevenue,
-  SUM(SUM(p.Amount)) OVER (
-    PARTITION BY c.ClassID 
-    ORDER BY DATE_FORMAT(p.PaymentDate, '%Y-%m')
-  ) AS RunningTotalByClass,
-  SUM(SUM(p.Amount)) OVER (
-    PARTITION BY DATE_FORMAT(p.PaymentDate, '%Y-%m')
-  ) AS RunningTotalByMonth
-FROM payments p
-JOIN bookings b ON p.MemberID = b.MemberID
-JOIN classes cs ON b.ClassID = cs.ClassID
-JOIN classes c ON cs.ClassID = c.ClassID
-WHERE YEAR(p.PaymentDate) = 2025
-  AND p.PaymentStatus = 'Paid'
-GROUP BY c.ClassID, c.ClassName, RevenueMonth;
+
+SELECT c.ClassName,YEAR(p.PaymentDate) AS PaymentYear,MONTH(p.PaymentDate) AS PaymentMonth,
+SUM(p.Amount) AS TotalRevenue, SUM(SUM(p.Amount)) 
+OVER (PARTITION BY c.ClassName ORDER BY YEAR(p.PaymentDate), 
+MONTH(p.PaymentDate)) AS RunningTotalPerClass,
+SUM(SUM(p.Amount)) OVER (PARTITION BY YEAR(p.PaymentDate),
+ MONTH(p.PaymentDate)) AS RunningTotalPerMonth
+FROM Payments p
+JOIN Bookings b ON p.MemberID = b.MemberID
+JOIN Classes c ON b.ClassID = c.ClassID
+WHERE p.PaymentStatus = 'Paid'
+GROUP BY c.ClassName, PaymentYear, PaymentMonth;

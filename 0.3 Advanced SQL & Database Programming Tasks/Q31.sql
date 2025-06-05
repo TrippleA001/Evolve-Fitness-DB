@@ -1,0 +1,9 @@
+use evolve_fitness;
+-- FUNCTION: Calculate Member Age
+DELIMITER //
+CREATE FUNCTION CalculateMemberAge(p_DateOfBirth DATE) RETURNS INT
+DETERMINISTIC
+BEGIN
+RETURN TIMESTAMPDIFF(YEAR, p_DateOfBirth, CURDATE());
+END //
+DELIMITER ;
